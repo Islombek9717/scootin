@@ -1,0 +1,153 @@
+.hero {
+  z-index: 0;
+  background-image: url("./../image/hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding-top: 157px;
+  padding-bottom: 152px;
+  position: relative;
+  margin-bottom: 160px;
+  &-arr {
+    display: none;
+    position: absolute;
+    top: 437px;
+    left: -127px;
+    right: 0;
+    bottom: 0;
+  }
+
+  &-box {
+    .hero-wrapper {
+      max-width: 500px;
+    }
+    &__heading {
+      margin: 0;
+      margin-bottom: 40px;
+      font-weight: 700;
+      font-size: 56px;
+      line-height: 56px;
+      color: #ffffff;
+      letter-spacing: -2.5px;
+    }
+
+    &__text {
+      margin: 0;
+      font-family: "Lexend Deca";
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 25px;
+      color: #ffffff;
+      margin-left: 95px;
+      margin-bottom: 40px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        top: 50px;
+        right: 0;
+        bottom: 0;
+        left: -260px;
+        content: "";
+        width: 200px;
+        height: 14px;
+        background-image: url("./../image/path_line-hero.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 446px;
+        height: 137px;
+        top: 50px;
+        right: 0;
+        bottom: 0;
+        left: 420px;
+        background-image: url("./../image/path_line_hero-arr.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    &__btn {
+      @include btn();
+      margin-left: 95px;
+      &:hover {
+        background-color: transparent;
+        color: $main-yellow-color;
+        border: 3px solid #fcb72b;
+      }
+    }
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  background-image: url("./../image/hero@2x.png");
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    z-index: 0;
+    &-arr {
+      display: block;
+    }
+  }
+  .hero-box {
+    .hero-wrapper {
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+    }
+
+    &__heading {
+      margin-bottom: 24px;
+    }
+
+    &__text {
+      margin: 0;
+      margin-bottom: 32px;
+      &::before {
+        display: none;
+      }
+      &::after {
+        display: none;
+      }
+    }
+
+    &__btn {
+      margin: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 376px) {
+  .hero {
+    z-index: -2;
+    padding-top: 115px;
+    &-arr {
+      top: 478px;
+      left: -290px;
+    }
+  }
+
+  .hero-wrapper {
+    width: 311px;
+  }
+
+  .hero-box {
+    &__heading {
+      font-size: 40px;
+      line-height: 40px;
+      letter-spacing: -1.78px;
+      margin-bottom: 24px;
+    }
+  }
+}

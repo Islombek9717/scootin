@@ -1,0 +1,22 @@
+// @mixin list() {
+//   display: flex;
+//   align-items: center;
+//   list-style-type: none;
+// }
+
+@mixin link() {
+  text-decoration: none;
+  margin-right: 32px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 25px;
+  color: $main-grey-color;
+}
+
+@mixin btn() {
+  color: #ffffff;
+  background-color: $main-yellow-color;
+  padding: 14px 39px;
+  font-weight: 700;
+  border: none;
+}
